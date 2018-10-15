@@ -1,0 +1,226 @@
+/**
+ * Documentation CSS
+ * @copyright Jordan Davila 2018
+ */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  color: #525252
+}
+
+#mainNav {
+  flex: 280px 0;
+  padding: 30px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  background-image: url('../img/logos/logo-docs.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80px;
+  width: 100%;
+  border: 23px solid rgba(255, 255, 255, 0);
+}
+
+.active {
+  color: #e43f48 !important;
+}
+
+#mainNav ul {
+  width: 100%;
+}
+
+#mainNav ul li a {
+  padding: 2px 20px;
+  line-height: 36px;
+  width: 100%;
+  display: block;
+  color: #777;
+  transition: .3s ease;
+}
+
+#mainNav ul li a:hover {
+  background-color: #eee;
+  color: #e43f48;
+}
+
+.copyright {
+  color: #777;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+
+main {
+  flex: 1 0;
+  overflow-y: auto;
+}
+
+.topBar {
+  height: 90px;
+  width: 100%;
+  padding: 30px;
+  background-color: #e43f48;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topBar ul li {
+  display: inline;
+}
+
+.topBar ul li a {
+  padding: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#mainContent {
+  padding: 70px;
+}
+
+.tableContent {
+  padding: 50px 20px 20px 30px;
+  margin-top: 40px;
+  line-height: 30px;
+  background-color: #fcfcfc;
+}
+
+.tableContent a {
+  color: #888;
+  transition: .3s ease;
+  counter-reset: tableContent1;
+}
+
+.tableContent a:hover {
+  color: #e43f48;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li
+}
+
+ol li::before {
+  content: counter(li) ". ";
+  color: #888;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+ol li {
+  counter-increment: li
+}
+
+h1 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 52px;
+  margin-bottom: 45px;
+}
+
+h2 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.7em;
+  font-weight: 200;
+  line-height: 52px;
+  margin-bottom: 35px;
+  margin-top: 45px;
+}
+
+h3 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.docTableContainer {
+  background-color: #fff;
+  padding: 17px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 20px 0px;
+}
+
+.docTable {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.docTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.docTable tr {
+  border-top: 1px solid #ddd;
+}
+
+.docTable tr:first-child {
+  border-top: 0px ;
+}
+
+.docTable td, .docTable th {
+  padding: 8px;
+  border-right: 1px solid #ddd;
+  line-height: 1.42857143;
+  vertical-align: top;
+  text-align: left;
+}
+
+.docTable td:first-child {
+    font-weight: 400;
+    padding-right: 40px;
+}
+
+.importantStar {
+  font-family: Roboto;
+  font-size: 1em;
+  height: 10px;
+  color: #e43f48;
+  font-weight: 900;
+  margin-right: 3px;
+}

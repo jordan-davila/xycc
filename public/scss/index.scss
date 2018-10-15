@@ -1,0 +1,308 @@
+/**
+ * Index Page CSS
+ * @copyright Jordan Davila 2018
+ */
+
+// Variable Colors
+$red: #e43f48;
+$black: #010101;
+$white: #ffffff;
+$grey1: #171715;
+$grey2: #525252;
+$grey3: #b7b7b7;
+
+// Variable Fonts
+$lato: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$roboto: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$raleway: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Logos & Icons
+.black_full_logo { background-image: url('../img/logos/logo1.png'); }
+.white_full_logo { background-image: url('../img/logos/logo4.png'); }
+.grey_full_logo { background-image: url('../img/logos/logo3.png'); }
+.red_full_logo { background-image: url('../img/logos/logo2.png'); }
+.black_icon_logo { background-image: url('../img/logos/icon1.png'); }
+.white_icon_logo { background-image: url('../img/logos/icon4.png'); }
+.grey_icon_logo { background-image: url('../img/logos/icon3.png'); }
+.red_icon_logo { background-image: url('../img/logos/icon2.png'); }
+
+  //Mixins
+  @mixin logo_standard {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/**
+ * Main Html Body Wrappers
+ * @updated 01/25/18
+ */
+
+html, body {
+  width: 100%;
+  font-family: $lato;
+  background-color: $white;
+  color: $grey2;
+  letter-spacing: 1px;
+}
+
+/**
+ * Properties
+ */
+
+ .no_site {
+  width: 0vw!important;
+  height: 0vh!important;
+ }
+ .show_flex { display: flex!important; }
+ .show_block { display: block!important; }
+ .show_none { display: none!important; }
+ .no_opacity { opacity: 0; }
+ .with_opacity { opacity: 1!important; }
+
+ /**
+  * Preloader
+  */
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all ease 1s;
+  .logo {
+    @include logo_standard;
+    width: 200px;
+    height: 40px;
+  }
+}
+
+/**
+ * Main
+ */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#website {
+  background: linear-gradient(90deg, #FF5858, #E43F48);
+  transition: 1s ease all;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  border-radius: 10px;
+  box-shadow: 5px 3px 10px rgba(0,0,0,0.3);
+}
+
+// Floating Elements
+.logo_full_wrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  transition: 1s ease all;
+  display: flex;
+  .logo_wrap {
+    width: 80px;
+    height: 80px;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      @include logo_standard;
+      width: 40%;
+      height: 40%;
+    }
+  }
+  .logo_text {
+    @include logo_standard;
+    background-position: top;
+    background-image: url(../img/logos/logo-text.png);
+    width: 120px;
+    height: 80px;
+    margin-left: 15px;
+  }
+}
+
+.login_wrap {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  align-items: center;
+  z-index: 9999;
+  transition: 1s ease all;
+  display: flex;
+  a {
+    color: $white;
+    font-size: 1em;
+    font-weight: 200;
+    display: inline-block;
+  }
+  .login_line {
+    height: 1px;
+    background-color: $white;
+    width: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    transition: 0.5s ease all;
+  }
+}
+
+.login_wrap:hover > .login_line {
+  width: 60px;
+}
+
+.apply_btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: $red;
+  background-color: $white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  z-index: 9999;
+  transition: 1s ease all;
+}
+
+// Center Title with Menu
+#main_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: 1s ease all;
+  h1 {
+    font-size: 10vw;
+    color: $white;
+    font-weight: 900;
+    letter-spacing: 10px;
+    position: relative;
+    span {
+      font-size: 0.15em;
+      letter-spacing: 1px;
+      font-weight: 400;
+      position: absolute;
+      top: 0;
+      left: -20px;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      a {
+        color: $white;
+        font-size: 1em;
+        font-weight: 400;
+      }
+    }
+  }
+  p {
+    color: $white;
+    margin-top: 20px;
+    line-height: 30px;
+    width: 50%;
+  }
+}
+
+.left_content {
+  position: absolute!important;
+  left: 8vw;
+  align-items: flex-start!important;
+}
+
+// Background Circles
+.gallery_circles {
+  position: absolute;
+  height: 37vw;
+  width: 37vw;
+  transition: 1s ease all;
+  top: calc(50vh - 19vw);
+  left: calc(50vw - 19vw);
+  .circle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $red;
+    border-radius: 500px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: circle infinite linear 4s;
+    transition: all 1s ease;
+  }
+  .selected {
+    width: 25vw;
+    height: 25vw;
+    opacity: 0.7;
+  }
+  .x1 {
+    top: 0;
+    right: 0;
+    animation: circle infinite linear 5s;
+  }
+  .x2 {
+    bottom: 30%;
+    left: 0;
+    width: 15vw;
+    height: 15vw;
+    animation: circle infinite linear 4s;
+  }
+  .x3 {
+    bottom: 10%;
+    left: 50%;
+    width: 10vw;
+    height: 10vw;
+    animation: circle infinite linear 2s;
+  }
+  .x4 {
+    bottom: 10%;
+    left: 20%;
+    width: 5vw;
+    height: 5vw;
+    animation: circle infinite linear 2.5s;
+  }
+  .x5 {
+    top: 10%;
+    left: 30%;
+    width: 5vw;
+    height: 5vw;
+    animation: circle infinite linear 3.5s;
+  }
+  .full_circle {
+    border-radius: 0;
+    animation: unset;
+    width: 100%;
+    height: 100%;
+    background-position: right;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.full_gallery {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+
+@keyframes circle {
+  from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+}
