@@ -11,8 +11,8 @@ XYCC is a free open-source online Learning Management System (LMS) or a Course M
 - More features to come.
 
 ## Demo
-Homepage: https://xycc.jordandavila.com/  
-Portal Login: https://xycc.jordandavila.com/users/login/  
+Homepage: <a href="https://xycc.jordandavila.com/" target="_blank">https://xycc.jordandavila.com/</a>  
+Portal Login: <a href="https://xycc.jordandavila.com/users/login/" target="_blank">https://xycc.jordandavila.com/users/login/</a>
 
 There are 3 user roles. The admin, teacher and the student.
 
