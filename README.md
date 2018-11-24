@@ -29,6 +29,6 @@ Email: student@example.com
 Password: password  
 
 ## Documentation
-For more information on XYCC, visit http://www.jordandavila.com/xycc/docs
+For more information on XYCC, visit http://xycc.jordandavila.com/docs
 
 
